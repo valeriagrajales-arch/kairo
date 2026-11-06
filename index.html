@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAIRO Joyería</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="#inicio">
+      <img class="logo" src="assets/logo-kairo.png" alt="KAIRO">
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#combos">Combos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="iconos">
+      <button class="boton-icono" onclick="abrirFavoritos()">♡ <span id="contadorFavoritos">0</span></button>
+      <button class="boton-icono" onclick="abrirCarrito()">Carrito <span id="contadorCarrito">0</span></button>
+      <button class="boton-menu" onclick="abrirMenu()">☰</button>
+    </div>
+  </header>
+
+  <section class="portada" id="inicio">
+    <div class="portada-texto">
+      <p class="subtitulo">Bienvenido a Kairo</p>
+      <h1>Calidez que impone <span class="dorado">elegancia</span></h1>
+      <p>Joyas diseñadas para resaltar tu esencia. Cada pieza cuenta una historia, cada detalle refleja perfección.</p>
+      <a href="#catalogo" class="boton">Ver catálogo</a>
+      <a href="#combos" class="boton boton-borde">Ver combos</a>
+    </div>
+    <img class="portada-foto" src="assets/img/hero-collar-anillo.jpg" alt="Collar y anillo dorados KAIRO">
+  </section>
+
+  <section class="seccion" id="catalogo">
+    <p class="subtitulo">Catálogo</p>
+    <h2>Nuestra colección</h2>
+    <p class="adorno">✦</p>
+
+    <div class="productos">
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Collar Sol de Kairo')">♡</button>
+        <img src="assets/img/collar-sol.jpg" alt="Collar Sol de Kairo">
+        <h3>Collar Sol de Kairo</h3>
+        <p class="precio">$149.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Collar Sol de Kairo', 149000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Anillo Eclipse')">♡</button>
+        <img src="assets/img/anillo-eclipse.jpg" alt="Anillo Eclipse">
+        <h3>Anillo Eclipse</h3>
+        <p class="precio">$89.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Anillo Eclipse', 89000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Anillo Flor de Sol')">♡</button>
+        <img src="assets/img/anillo-flor.jpg" alt="Anillo Flor de Sol">
+        <h3>Anillo Flor de Sol</h3>
+        <p class="precio">$119.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Anillo Flor de Sol', 119000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Manilla Ondas')">♡</button>
+        <img src="assets/img/manilla-ondas.jpg" alt="Manilla Ondas">
+        <h3>Manilla Ondas</h3>
+        <p class="precio">$169.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Manilla Ondas', 169000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Anillo Espiral')">♡</button>
+        <img src="assets/img/anillo-espiral.jpg" alt="Anillo Espiral">
+        <h3>Anillo Espiral</h3>
+        <p class="precio">$99.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Anillo Espiral', 99000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Argollas Doradas')">♡</button>
+        <img src="assets/img/argollas.jpg" alt="Argollas Doradas">
+        <h3>Argollas Doradas</h3>
+        <p class="precio">$99.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Argollas Doradas', 99000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Cadena Eslabón')">♡</button>
+        <img src="assets/img/cadena-eslabon.jpg" alt="Cadena Eslabón">
+        <h3>Cadena Eslabón</h3>
+        <p class="precio">$129.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Cadena Eslabón', 129000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Aretes Dorados')">♡</button>
+        <img src="assets/img/aretes-dorados.jpg" alt="Aretes Dorados">
+        <h3>Aretes Dorados</h3>
+        <p class="precio">$89.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Aretes Dorados', 89000)">Agregar al carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="seccion combos" id="combos">
+    <p class="subtitulo">Sección especial</p>
+    <h2>Combos Kairo</h2>
+    <p class="adorno">✦</p>
+    <p class="intro">Lleva dos o más piezas juntas y ahorra.</p>
+
+    <div class="lista-combos">
+
+      <div class="combo">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Combo Cadena y Anillo')">♡</button>
+        <img src="assets/img/combo-cadena-anillo.jpg" alt="Combo cadena y anillo">
+        <span class="ahorro">Ahorra 10%</span>
+        <h3>Cadena + Anillo</h3>
+        <p>Collar Sol de Kairo y Anillo Eclipse</p>
+        <p class="precio"><del>$238.000</del> $214.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Combo Cadena y Anillo', 214000)">Agregar al carrito</button>
+      </div>
+
+      <div class="combo">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Combo Anillo y Manilla')">♡</button>
+        <img src="assets/img/coleccion-manilla-anillos.jpg" alt="Combo anillo y manilla">
+        <span class="ahorro">Ahorra 10%</span>
+        <h3>Anillo + Manilla</h3>
+        <p>Anillo Espiral y Manilla Ondas</p>
+        <p class="precio"><del>$268.000</del> $241.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Combo Anillo y Manilla', 241000)">Agregar al carrito</button>
+      </div>
+
+      <div class="combo">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Combo Cadena y Aretes')">♡</button>
+        <img src="assets/img/cadenas-aretes-rojo.jpg" alt="Combo cadena y aretes">
+        <span class="ahorro">Ahorra 10%</span>
+        <h3>Cadena + Aretes</h3>
+        <p>Cadena Eslabón y Argollas Doradas</p>
+        <p class="precio"><del>$228.000</del> $205.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Combo Cadena y Aretes', 205000)">Agregar al carrito</button>
+      </div>
+
+      <div class="combo">
+        <button class="boton-favorito" onclick="agregarFavorito(this, 'Combo Set Kairo')">♡</button>
+        <img src="assets/img/modelo-aretes-cadenas.jpg" alt="Set completo Kairo">
+        <span class="ahorro">Ahorra 15%</span>
+        <h3>Set Kairo</h3>
+        <p>Cadena, Anillo Flor de Sol y Aretes Dorados</p>
+        <p class="precio"><del>$337.000</del> $286.000</p>
+        <button class="boton" onclick="agregarAlCarrito('Combo Set Kairo', 286000)">Agregar al carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="seccion nosotros" id="nosotros">
+    <img class="nosotros-foto" src="assets/img/anillos-arena.jpg" alt="Joyas KAIRO sobre arena">
+
+    <div class="nosotros-texto">
+      <p class="subtitulo">Nosotros</p>
+      <h2>Cómo empezó todo</h2>
+      <p class="adorno">✦</p>
+      <p>Todo empezó con una idea sencilla: que una joya no solo adorna, también acompaña. Comenzamos con unas pocas piezas elegidas a mano y clientas que nos recomendaban de boca en boca. Así nació KAIRO.</p>
+      <p>Nuestro símbolo une un sol y una luna alrededor de la K. Representa la calidez y la luz propia que queremos que sientas al llevar una pieza KAIRO.</p>
+      <p>Hoy seguimos eligiendo cada diseño con el mismo cuidado del primer día.</p>
+    </div>
+  </section>
+
+  <section class="seccion contacto" id="contacto">
+    <p class="subtitulo">Contacto</p>
+    <h2>Hablemos de tu próxima joya</h2>
+    <p class="adorno">✦</p>
+
+    <div class="contacto-columnas">
+
+      <div class="datos">
+        <p><strong>WhatsApp:</strong> +57 316 7134281</p>
+        <p><strong>Correo:</strong> Kairojoyeriaof@gmail.</p>
+        <p><strong>Instagram:</strong> @kairo.joyeria</p>
+        <p><strong>Horario:</strong> Lunes a sábado, 9:00am a 5:00 pm </p>
+        <a href="https://wa.me/573167134281" class="boton" target="_blank">Escríbenos por WhatsApp</a>
+      </div>
+
+      <form class="formulario" onsubmit="enviarMensaje(); return false;">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="boton">Enviar por WhatsApp</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="pie">
+    <img src="assets/logo-kairo-lema.png" alt="KAIRO, calidez que impone elegancia">
+    <p>© 2026 KAIRO Joyería. Todos los derechos reservados.</p>
+  </footer>
+
+  <aside class="panel" id="panelCarrito">
+    <div class="panel-cabeza">
+      <h3>Tu carrito</h3>
+      <button class="cerrar" onclick="cerrarPaneles()">✕</button>
+    </div>
+    <ul class="lista" id="listaCarrito"></ul>
+    <div class="panel-pie">
+      <p class="total-carrito">Total: <span id="totalCarrito">$0</span></p>
+      <button class="boton" onclick="finalizarPedido()">Finalizar pedido por WhatsApp</button>
+      <button class="boton boton-borde" onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <aside class="panel" id="panelFavoritos">
+    <div class="panel-cabeza">
+      <h3>Tus favoritos</h3>
+      <button class="cerrar" onclick="cerrarPaneles()">✕</button>
+    </div>
+    <ul class="lista" id="listaFavoritos"></ul>
+    <div class="panel-pie">
+      <button class="boton boton-borde" onclick="borrarFavoritos()">Borrar favoritos</button>
+    </div>
+  </aside>
+
+  <div class="fondo-oscuro" id="fondoOscuro" onclick="cerrarPaneles()"></div>
+
+  <a href="#inicio" class="boton-arriba">↑</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
